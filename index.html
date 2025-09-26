@@ -103,8 +103,9 @@
       <img src="./static/image/pipeline.png" alt="Framework Overview" style="max-width: 100%;">
       <figcaption style="margin-top: 0.5em;">Figure 1: Overall architecture of the proposed framework.</figcaption>
     </figure>
-
 </section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -244,6 +245,122 @@
 </section>
 
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Speech Synthesis</h2>
+    <div class="content">
+
+      <ul>
+        <li><strong>Llasa-1B</strong>: The TTS results from original Llasa model.</li>
+        <li><strong>Llasa-1B_TTS</strong>: The TTS results from Llasa-1B model finetuned in ISSE.</li>
+        <li><strong>Llasa-1B_ESS</strong>: The expressive speech synthesis results from Llasa-1B model finetuned in ISSE with speech captions.</li>  
+      </ul>
+    </div>
+
+    <div class="box" style="overflow-x: auto; margin-top: 1.5em;">
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="min-width: 900px;">
+        <colgroup>
+          <col style="width: 30%;">
+          <col style="width: 20%;">
+          <col style="width: 20%;">
+          <col style="width: 30%;">
+        </colgroup>
+        <thead>
+          <tr class="has-background-light">
+            <th class="has-text-centered">Transcript</th>
+            <th class="has-text-centered">Llasa-1B</th>
+            <th class="has-text-centered">Llasa-1B_TTS</th>
+            <th class="has-text-centered">Llasa-1B_ESS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">Mm-hmm. Exactly. Exactly. You got that exactly right. You know what? Since you know it so well, why don't you go first?</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex01-ex02_fast_008_channel1_segment_188.63_193.59.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex01-ex02_fast_008_channel1_segment_188.63_193.59.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A male speaker delivers a singing, flowing speech at a fast speed.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex01-ex02_fast_008_channel1_segment_188.63_193.59.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">And we're good. All right. He's in there right now. He's unconscious from the shock, the trauma. So we're going to want to make sure that we cover all of our bases now. Do you know this guy's name?</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex01-ex02_fast_010_channel1_segment_23.61_34.3.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex01-ex02_fast_010_channel1_segment_23.61_34.3.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A male speaker delivers a flowing, fast-paced speech with a measured rhythm, displaying a singsong, high-pitched tone.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex01-ex02_fast_010_channel1_segment_23.61_34.3.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">He defended me during the trial.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex01_confused_00006.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex01_confused_00006.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A male American's speech is confused and delivered slowly.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex01_confused_00006.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">So I had to get myself in that emotional place and get sad again.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex01_sad_00192.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex01_sad_00192.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption:  male American's voice is heard, speaking with a measured pace. His speech is tinged with sadness.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex01_sad_00192.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">It was so spectacular you didn't even know if, like, is this digital like or what's going on here?</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex02_whisper_00197.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex02_whisper_00197.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A female speaker delivers a whispered, high-pitched speech with a measured speed.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex02_whisper_00197.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">I think RuPaul has a thing down here.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A sleepy male speaks in a measured, flowing manner, displaying a singsong accent.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">Enjoy with some candy and popcorn and make sure not to steal Smaug's gold!</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex03_happy_00184.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex03_happy_00184.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A male speaker delivers a happy and animated speech.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex03_happy_00184.wav"></audio>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: justify; font-size: 0.9em;">In Seattle today, there isn't any rain, but it's partly cloudy, with a very low chance of ice pellets.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_org/ex04_whisper_00237.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/llasa1b_ft/ex04_whisper_00237.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">
+              <p>Caption: A female speaks in a whispered, yet crisp and enunciated manner. Her voice is booming, with a measured speed and occasional shrillness. Despite her whispered tone, her speech remains loud and expressive.</p>
+              <audio controls style="width: 100%;" src="./static/audio/ESS/ex04_whisper_00237.wav"></audio>
+            </td>
+          
+          <!-- <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/dataset/"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/dataset/"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;"></td>
+          </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">LlasaEdit Samples</h2>
@@ -257,70 +374,43 @@
     <div class="box" style="overflow-x: auto; margin-top: 1.5em;">
       <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="min-width: 900px;">
         <colgroup>
-          <col style="width: 11.6%;">
-          <col style="width: 11.6%;">
           <col style="width: 30%;">
-          <col style="width: 11.6%;">
-          <col style="width: 11.6%;">
-          <col style="width: 11.6%;">
-          <col style="width: 11.6%;">
+          <col style="width: 40%;">
+          <col style="width: 30%;">
+          
         </colgroup>
         <thead>
           <tr class="has-background-light">
             <th class="has-text-centered">Source Speech</th>
-            <th class="has-text-centered">Audio Prompt</th>
             <th class="has-text-centered">Text Prompt</th>
-            <th class="has-text-centered">UniVST</th>
-            <th class="has-text-centered">AINN</th>
-            <th class="has-text-centered">Vevo</th>
-            <th class="has-text-centered">StyleVC</th>
+            <th class="has-text-centered">LlasaEdit</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0018_000692.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0016_000346.wav"></audio></td>
-            <td style="text-align: justify; font-size: 0.9em;">Whispering softly, her pitch remains high.</td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a animated, happy tone with a measured pace..</td>
             <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/ainn/ainn_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/vevo/vevo_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/stylevc/stylevc_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0016_000695.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0015_001392.wav"></audio></td>
-            <td style="text-align: justify; font-size: 0.9em;">Her low-energy voice contrasts with her heartbroken high key.</td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0016_000695_to_sad_0015_001392.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/ainn/ainn_angry_0016_000695_to_sad_0015_001392.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/vevo/vevo_angry_0016_000695_to_sad_0015_001392.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/stylevc/stylevc_angry_0016_000695_to_sad_0015_001392.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0018_000692.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a slow, sad tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0014_001046.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0020_001394.wav"></audio></td>
-            <td style="text-align: justify; font-size: 0.9em;">The heartbroken man speaks in a rich, low voice with a measured cadence.</td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_happy_0014_001046_to_sad_0020_001394.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/ainn/ainn_happy_0014_001046_to_sad_0020_001394.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/vevo/vevo_happy_0014_001046_to_sad_0020_001394.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/stylevc/stylevc_happy_0014_001046_to_sad_0020_001394.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0018_000692.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a fast-paced, happy tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0013_000350.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0017_001041.wav"></audio></td>
-            <td style="text-align: justify; font-size: 0.9em;">Speaking quickly with a high tone, her amused energy remained subdued.</td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_neutral_0013_000350_to_happy_0017_001041.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/ainn/ainn_neutral_0013_000350_to_happy_0017_001041.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/vevo/vevo_neutral_0013_000350_to_happy_0017_001041.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/stylevc/stylevc_neutral_0013_000350_to_happy_0017_001041.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0018_000692.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a cheerful, slow, animated tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0012_001399.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0014_000699.wav"></audio></td>
-            <td style="text-align: justify; font-size: 0.9em;">A livid man addresses topics with a standard pitch, engaging in discourse at a usual speed, and with an undertone of low energy.</td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_sad_0012_001399_to_angry_0014_000699.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/ainn/ainn_sad_0012_001399_to_angry_0014_000699.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/vevo/vevo_sad_0012_001399_to_angry_0014_000699.wav"></audio></td>
-            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/stylevc/stylevc_sad_0012_001399_to_angry_0014_000699.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/origin/0018_000692.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a measured, high-pitched, fast-paced style.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/static_evc/pidm/pidm_angry_0018_000692_to_neutral_0016_000346.wav"></audio></td>
           </tr>
         </tbody>
       </table>

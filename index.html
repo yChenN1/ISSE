@@ -75,7 +75,6 @@
 
 
 
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -85,14 +84,17 @@
         <div class="content has-text-justified">
           <p>
             Speech style editing refers to modifying the stylistic properties of speech while preserving its linguistic content and speaker identity. However, most existing approaches depend on explicit labels or reference audio, which limits both flexibility and scalability. More recent attempts to use natural language descriptions remain constrained by oversimplified instructions and coarse style control. To address these limitations, we introduce an Instruction-guided Speech Style Editing Dataset (ISSE). The dataset comprises nearly 400 hours of speech and over 100,000 source-target pairs, each aligned with diverse and detailed textual editing instructions. We also build a systematic instructed speech data generation pipeline leveraging large language model, expressive text-to-speech and voice conversion technologies to construct high-quality paired samples. Furthermore, we train an instruction-guided autoregressive speech model on ISSE and evaluate it in terms of instruction adherence, timbre preservation, and content consistency. Experimental results demonstrate that ISSE enables accurate, controllable, and generalizable speech style editing compared to other datasets. 
-            Our dataset ISSE will be available soon. 
+            Full ISSE dataset download as follows: <a href="https://huggingface.co/datasets/Ainncy/ISSE">GitHub Link</a>.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
   </div>
+
 </section>
+
+
 
 
 <section class="section">
@@ -102,10 +104,21 @@
     <!-- Image 1 -->
     <figure>
       <img src="./static/image/pipeline.png" alt="Framework Overview" style="max-width: 100%;">
-      <figcaption style="margin-top: 0.5em;">Figure 1: Overall architecture of the proposed framework.</figcaption>
+      <figcaption style="margin-top: 0.5em;"></figcaption>
     </figure>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Dataset Distribution</h2>
+
+    <!-- Image 1 -->
+    <figure>
+      <img src="./static/image/distribution.png" alt="Framework Overview" style="max-width: 100%;">
+      <figcaption style="margin-top: 0.5em;"></figcaption>
+    </figure>
+</section>
 
 
 <section class="section">
@@ -113,11 +126,7 @@
     <h2 class="title is-3">Dataset Speech Samples</h2>
     <div class="content">
 
-      <ul>
-        <li><strong>Source Speech</strong>: A sentence describing the intended speaking <em>style</em>.</li>
-        <li><strong>Target Speech</strong>: An audio sample representing the target <em>speaker identity</em>.</li>
-        <li><strong>Instruction</strong>: A sentence that describes the intended style transformation from source speech to target speech.</li>
-      </ul>
+
     </div>
 
     <div class="box" style="overflow-x: auto; margin-top: 1.5em;">
@@ -246,17 +255,109 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Speech Style Edit</h2>
+    <div class="content">
+
+    </div>
+
+    <div class="box" style="overflow-x: auto; margin-top: 1.5em;">
+      <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="min-width: 900px;">
+        <colgroup>
+          <col style="width: 23%;">
+          <col style="width: 30%;">
+          <col style="width: 23%;">
+          <col style="width: 23%;">
+        </colgroup>
+        <thead>
+          <tr class="has-background-light">
+            <th class="has-text-centered">Source Speech</th>
+            <th class="has-text-centered">Instruction</th>
+            <th class="has-text-centered">Generated Speech</th>
+            <th class="has-text-centered">Target Speech</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_angry_008_channel2_segment_30.9_34.17.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a flowing, singsong, authoritative, and happy tone with a high-pitched, nasal, clear voice, delivered slowly.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_angry_008_channel2_segment_30.9_34.17_to_ex03-ex01_angry_008_channel2_segment_30.9_34.17_gen_0.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_angry_008_channel2_segment_30.9_34.17_gen_0.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_disgusted_006_channel2_segment_202.98_208.17.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a clear, enunciated, slow, high-pitched style.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_disgusted_006_channel2_segment_202.98_208.17_to_ex03-ex01_disgusted_006_channel2_segment_202.98_208.17_gen_3.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_disgusted_006_channel2_segment_202.98_208.17_gen_3.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_001_channel1_segment_210.92_216.77.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a booming, enunciated, crisp, high-pitched, with a slow speed and loud volume.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_001_channel1_segment_210.92_216.77_to_ex03-ex01_happy_001_channel1_segment_210.92_216.77_gen_1.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_001_channel1_segment_210.92_216.77_gen_1.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_003_channel2_segment_240.69_252.45.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a high-pitched, silky, crisp, calm, and sing-song style.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_003_channel2_segment_240.69_252.45_to_ex03-ex01_happy_003_channel2_segment_240.69_252.45_gen_2.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_happy_003_channel2_segment_240.69_252.45_gen_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_001_channel2_segment_53.82_59.01.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a high-pitched, silky, singsong, slow, crisp, and clear tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_001_channel2_segment_53.82_59.01_to_ex03-ex01_sarcastic_001_channel2_segment_53.82_59.01_gen_4.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_001_channel2_segment_53.82_59.01_gen_4.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_004_channel2_segment_333.4_336.1.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a slow, high-pitched, slightly hushed tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_004_channel2_segment_333.4_336.1_to_ex03-ex01_sarcastic_004_channel2_segment_333.4_336.1_gen_2.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sarcastic_004_channel2_segment_333.4_336.1_gen_2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_002_channel2_segment_169.12_173.54.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a high-pitched, flowing, singsong, slow-paced, disgusted tone in an American accent with balanced clarity.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_002_channel2_segment_169.12_173.54_to_ex03-ex01_sleepy_002_channel2_segment_169.12_173.54_gen_1.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_002_channel2_segment_169.12_173.54_gen_1.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a high-pitched, confused, slow-paced style.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03_to_ex03-ex01_sleepy_003_channel2_segment_619.35_622.03_gen_3.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex01_sleepy_003_channel2_segment_619.35_622.03_gen_3.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_151.51_155.48.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a deep, calm, raspy, high-pitched, monotonous, slowly enunciated style.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_151.51_155.48_to_ex03-ex02_sad-sympathetic_001_channel2_segment_151.51_155.48_gen_3.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_151.51_155.48_gen_3.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_418.89_428.0.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a sing-song, authoritative, measured tone with a nasal, high-pitched quality.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_418.89_428.0_to_ex03-ex02_sad-sympathetic_001_channel2_segment_418.89_428.0_gen_0.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_001_channel2_segment_418.89_428.0_gen_0.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_006_channel2_segment_264.5_270.33.wav"></audio></td>
+            <td style="text-align: justify; font-size: 0.9em;">Convert the source speech to a high-pitched, slow, sad tone.</td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_006_channel2_segment_264.5_270.33_to_ex03-ex02_sad-sympathetic_006_channel2_segment_264.5_270.33_gen_4.wav"></audio></td>
+            <td><audio controls style="width: 100%;" src="./static/audio/LlasaEdit/ex03-ex02_sad-sympathetic_006_channel2_segment_264.5_270.33_gen_4.wav"></audio></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Speech Synthesis</h2>
     <div class="content">
 
-      <ul>
-        <li><strong>Llasa-1B</strong>: The TTS results from original Llasa model.</li>
-        <li><strong>Llasa-1B_TTS</strong>: The TTS results from Llasa-1B model finetuned in ISSE.</li>
-        <li><strong>Llasa-1B_ESS</strong>: The expressive speech synthesis results from Llasa-1B model finetuned in ISSE with speech captions.</li>  
-      </ul>
     </div>
 
     <div class="box" style="overflow-x: auto; margin-top: 1.5em;">
